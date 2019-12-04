@@ -30,15 +30,14 @@ namespace WebApplication1
             services.AddHttpContextAccessor();
 
             services.AddControllersWithViews();
-            // 注入多國語系設定
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.Configure<RequestLocalizationOptions>(
                 opts =>
                 {
                     var supportedCultures = new List<CultureInfo> {
                     new CultureInfo ("en-US"),
-                    new CultureInfo ("zh-CN"),
-                    new CultureInfo ("zh-TW")
+                    new CultureInfo ("zh-Hans-CN"),
+                    new CultureInfo ("zh-Hant-TW")
                     };
                     opts.DefaultRequestCulture = new RequestCulture("zh-Hant-TW");
                     opts.SupportedCultures = supportedCultures;
