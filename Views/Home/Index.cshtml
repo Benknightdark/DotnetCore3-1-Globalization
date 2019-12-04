@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@Localizer.GetString("hi").SearchedLocation
+<br />
+@Localizer.GetString("hi").ResourceNotFound
+<br />
+
+@Localizer.GetString("hi").Name
+<br />
+
+@Localizer.GetString("hi").Value
+<br />
+
+@Localizer["hi"]
