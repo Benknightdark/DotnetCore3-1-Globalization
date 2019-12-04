@@ -28,7 +28,7 @@ namespace WebApplication1.Controllers
 
             _context.HttpContext.Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture("zh-Hant-TW")),
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture("en-us")),
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
             return View();
